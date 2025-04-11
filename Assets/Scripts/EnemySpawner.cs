@@ -19,19 +19,21 @@ public class EnemySpawner : MonoBehaviour
             target = GameManager.instance.playerTransform;
 
         }
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // Call distance calculator, find distance between enemy and player
+                // Call distance calculator, find distance between enemy and player
         float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
 
         if(distance < range)
         {
             Instantiate(enemy, transform.position, Quaternion.identity);
         }
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
 
         
     }

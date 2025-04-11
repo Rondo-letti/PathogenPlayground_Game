@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
 	private Vector3 mousePosition;
-	private float moveSpeed = 3f;
+	public float moveSpeed = 2f;
     private Vector3 targetPosition;
 
 	// Use this for initialization

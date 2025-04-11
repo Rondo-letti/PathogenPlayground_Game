@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
   
     public Transform playerTransform;    
 
+    public float playerHealth = 100f;
+    public float enemyDamage = 25f;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,5 +40,7 @@ public class GameManager : MonoBehaviour
 		float distance = Vector2.Distance(enemyPos, playerPos);    
 		return distance;
     }
+
+
 
 }
