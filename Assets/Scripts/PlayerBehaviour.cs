@@ -15,12 +15,20 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            Debug.Log("Colliding with enemy");
+            //Debug.Log("Colliding with enemy");
 
             GameManager.instance.playerHealth = GameManager.instance.playerHealth - GameManager.instance.enemyDamage;
-            Debug.Log(GameManager.instance.playerHealth);
+
+            //Debug.Log(GameManager.instance.playerHealth);
              
         }
+
+        if (GameManager.instance.playerHealth <= 0)
+        {
+            Destroy(gameObject);
+            Debug.Log("Game Over!");
+        }
+
 
     }
 }

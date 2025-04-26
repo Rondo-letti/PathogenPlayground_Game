@@ -27,6 +27,12 @@ public class EnemyBehaviour : MonoBehaviour
     void Update()
     {
 
+    if (target == null)
+    {
+        //Do nothing
+        return;
+    }
+    
     // Call distance calculator, find distance between enemy and player
     float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
 

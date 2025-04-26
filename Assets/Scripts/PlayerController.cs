@@ -24,8 +24,9 @@ public class PlayerController : MonoBehaviour
         targetPosition = Vector3.Lerp(transform.position, mousePosition, moveSpeed * Time.deltaTime);
     
         
-        // Player moves toward mouse position
+        // Player moves and faces toward mouse position
         transform.position = targetPosition;
+		//transform.LookAt(targetPosition);
 
 
 	}

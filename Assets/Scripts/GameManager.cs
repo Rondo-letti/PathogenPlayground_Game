@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public Transform playerTransform;    
 
     public float playerHealth = 100f;
-    public float enemyDamage = 25f;
+    public float enemyDamage = 10f;
 
     // Start is called before the first frame update
     void Awake()
@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     // Calculates the distance between two positions
     public float DistanceCalculator(Vector2 enemyPos, Vector2 playerPos)
     {
-      
         // Get the distance between the enemy and the player
 		float distance = Vector2.Distance(enemyPos, playerPos);    
 		return distance;
