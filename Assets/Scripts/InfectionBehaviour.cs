@@ -5,9 +5,6 @@ using UnityEngine;
 public class InfectionBehaviour : MonoBehaviour
 {
 
-    // If the player is in a certain tile, change colour of tile to yellow
-    // If tile is yellow, add value to progress meter
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,27 +17,39 @@ public class InfectionBehaviour : MonoBehaviour
         
     }
 
+    //
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Tile"))
         {
-            //Debug.Log("Player colliding with tile.");
+            Debug.Log("Player colliding with tile.");
             SpriteRenderer tileRenderer = other.GetComponent<SpriteRenderer>();
-            tileRenderer.color = new Color(1f, 1f, 0f, 0.2f);     
+            //tileRenderer.color = new Color(1f, 1f, 0f, 0.2f);   
+
+            //add a Sprite Mask to each collided tile NOT WORKING
+            if (other.GetComponent<SpriteMask>() == null)
+            {
+                var SpriteMask = other.gameObject.AddComponent<SpriteMask>();
+                SpriteMask.sprite = GameManager.instance.tileMaskSprite;
+                Debug.Log("Sprite Mask Assigned");
+            }
 
             InfectionTracker(tileRenderer);
        
         }
     }
 
+    //yellow tiles represent infection area, certain amount of infection = win
     public void InfectionTracker(SpriteRenderer tileRenderer)
     {
+        //if the tiles turn yellow, add to the infection value
         if(tileRenderer.color == new Color(1f, 1f, 0f, 0.2f))
         {
             GameManager.instance.infectionValue += 1;
             Debug.Log(GameManager.instance.infectionValue);
         }
 
+        //if the infection value is at X, win condition
         if (GameManager.instance.infectionValue == 3000)
         {
             Debug.Log("You Win!");
