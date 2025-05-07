@@ -20,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
 
         }
 
-                // Call distance calculator, find distance between enemy and player
+        // Call distance calculator, find distance between enemy and player
         float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
 
         if(distance < range)

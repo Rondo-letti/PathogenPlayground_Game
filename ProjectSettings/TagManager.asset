@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Background
+  - Enemy
+  - Tile
   layers:
   - Default
   - TransparentFX
@@ -45,6 +47,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 4044772899
+    locked: 0
+  - name: Infection
+    uniqueID: 4025161337
     locked: 0
   - name: Ground
     uniqueID: 1457851025

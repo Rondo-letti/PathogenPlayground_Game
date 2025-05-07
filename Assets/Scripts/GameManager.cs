@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public float playerHealth = 100f;
     public float enemyDamage = 10f;
 
+    public float infectionValue = 0;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -39,6 +41,8 @@ public class GameManager : MonoBehaviour
 		float distance = Vector2.Distance(enemyPos, playerPos);    
 		return distance;
     }
+
+
 
 
 
