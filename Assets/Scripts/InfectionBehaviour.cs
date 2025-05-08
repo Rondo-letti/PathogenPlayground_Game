@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InfectionBehaviour : MonoBehaviour
 {
+    public bool tileCollided;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +23,10 @@ public class InfectionBehaviour : MonoBehaviour
     {
         if(other.CompareTag("Tile"))
         {
-            Debug.Log("Player colliding with tile.");
+            //Debug.Log("Player colliding with tile.");
             SpriteRenderer tileRenderer = other.GetComponent<SpriteRenderer>();
 
-            //add a Sprite Mask to each collided tile 
+            //add a object with a sprite mask to the tiles 
             if (other.transform.Find("TileMask") == null)
             {
                 GameObject maskObj = new GameObject("TileMask");
@@ -34,6 +35,8 @@ public class InfectionBehaviour : MonoBehaviour
 
                 SpriteMask mask = maskObj.AddComponent<SpriteMask>();
                 mask.sprite = GameManager.instance.tileMaskSprite;
+
+                tileCollided = true;
 
                 //Debug.Log("Sprite Mask Assigned");
             }
@@ -47,7 +50,7 @@ public class InfectionBehaviour : MonoBehaviour
     public void InfectionTracker(SpriteRenderer tileRenderer)
     {
         //if the tiles turn yellow, add to the infection value
-        if(tileRenderer.color == new Color(1f, 1f, 0f, 0.2f))
+        if(tileCollided == true)
         {
             GameManager.instance.infectionValue += 1;
             Debug.Log(GameManager.instance.infectionValue);

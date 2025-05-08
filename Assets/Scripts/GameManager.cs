@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     public float infectionValue = 0;
 
-    float timeLeft = 180f;
+    //float timeLeft = 180f;
 
 
     // Start is called before the first frame update

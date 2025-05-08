@@ -20,6 +20,19 @@ public class UIBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = GameManager.instance.playerHealth.ToString();
+        healthText.text = "Health: " + GameManager.instance.playerHealth.ToString();
     }
+
+    /*public ProgressBar CreateProgressBar()
+    {
+        var progressBar = new ProgressBar
+        {
+            title = "Infection Progress",
+            lowValue = 0f,
+            highValue = 100f, 
+            value = 0f
+        }
+
+        
+    }*/
 }

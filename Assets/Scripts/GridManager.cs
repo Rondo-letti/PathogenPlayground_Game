@@ -41,12 +41,6 @@ public class GridManager : MonoBehaviour
                     spriteRenderer.color = tileColor;
                 }
 
-                //add a Sprite Mask to each tile
-                if (spawnedTile.GetComponent<SpriteMask>() == null)
-                {
-                    var SpriteMask = spawnedTile.gameObject.AddComponent<SpriteMask>();
-                }
-
                 //add a box collider to each tile
                 if (spawnedTile.GetComponent<Collider2D>() == null)
                 {
