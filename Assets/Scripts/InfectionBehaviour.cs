@@ -24,14 +24,18 @@ public class InfectionBehaviour : MonoBehaviour
         {
             Debug.Log("Player colliding with tile.");
             SpriteRenderer tileRenderer = other.GetComponent<SpriteRenderer>();
-            //tileRenderer.color = new Color(1f, 1f, 0f, 0.2f);   
 
-            //add a Sprite Mask to each collided tile NOT WORKING
-            if (other.GetComponent<SpriteMask>() == null)
+            //add a Sprite Mask to each collided tile 
+            if (other.transform.Find("TileMask") == null)
             {
-                var SpriteMask = other.gameObject.AddComponent<SpriteMask>();
-                SpriteMask.sprite = GameManager.instance.tileMaskSprite;
-                Debug.Log("Sprite Mask Assigned");
+                GameObject maskObj = new GameObject("TileMask");
+                maskObj.transform.SetParent(other.transform);
+                maskObj.transform.localPosition = Vector3.zero;
+
+                SpriteMask mask = maskObj.AddComponent<SpriteMask>();
+                mask.sprite = GameManager.instance.tileMaskSprite;
+
+                //Debug.Log("Sprite Mask Assigned");
             }
 
             InfectionTracker(tileRenderer);
