@@ -7,7 +7,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     //if the player collides with the enemy, take damage 

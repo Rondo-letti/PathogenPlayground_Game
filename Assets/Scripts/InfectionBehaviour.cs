@@ -9,7 +9,7 @@ public class InfectionBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -53,7 +53,7 @@ public class InfectionBehaviour : MonoBehaviour
         if(tileCollided == true)
         {
             GameManager.instance.infectionValue += 1;
-            Debug.Log(GameManager.instance.infectionValue);
+            //Debug.Log(GameManager.instance.infectionValue);
         }
 
         //if the infection value is at X, win condition

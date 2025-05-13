@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    private float currCountdownValue;
-
     void Start()
     {
         StartCoroutine(StartCountdown());
     }
 
-    public IEnumerator StartCountdown(float countdownValue = 10)
+    public IEnumerator StartCountdown()
     {
-        currCountdownValue = countdownValue;
-        while (currCountdownValue > 0)
+        while (GameManager.instance.countdownValue > 0)
         {
-            Debug.Log("Countdown: " + currCountdownValue);
+            Debug.Log("Countdown: " + GameManager.instance.countdownValue);
             yield return new WaitForSeconds(1.0f);
-            currCountdownValue--;
+            GameManager.instance.countdownValue--;
         }
 
         Debug.Log("Game Over!");

@@ -13,7 +13,9 @@ public class GameManager : MonoBehaviour
     public float playerHealth = 100f;
     public float enemyDamage = 10f;
 
-    public float infectionValue = 0;
+    public int infectionValue = 0;
+    
+    public int countdownValue = 180;
 
     //float timeLeft = 180f;
 
