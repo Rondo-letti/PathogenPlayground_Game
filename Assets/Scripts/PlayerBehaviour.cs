@@ -26,7 +26,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (GameManager.instance.playerHealth <= 0)
         {
             Destroy(gameObject);
-            Debug.Log("Game Over!");
+            UIBehaviour.GameOver();
         }
 
 

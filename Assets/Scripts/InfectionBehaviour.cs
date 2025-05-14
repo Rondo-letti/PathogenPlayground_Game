@@ -59,7 +59,8 @@ public class InfectionBehaviour : MonoBehaviour
         //if the infection value is at X, win condition
         if (GameManager.instance.infectionValue == 3000)
         {
-            Debug.Log("You Win!");
+            //Debug.Log("You Win!");
+            UIBehaviour.GameWin();
         }
     }
 }
