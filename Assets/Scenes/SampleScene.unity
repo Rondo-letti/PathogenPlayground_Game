@@ -536,6 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 1627238522}
+  timerText: {fileID: 0}
 --- !u!114 &438006059
 MonoBehaviour:
   m_ObjectHideFlags: 0

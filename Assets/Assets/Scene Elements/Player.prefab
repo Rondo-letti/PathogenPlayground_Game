@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7849798034523385387
 SpriteRenderer:
@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4164bec6d7df1458e898a707056ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tileCollided: 0
 --- !u!50 &-4747820043838952572
 Rigidbody2D:
   serializedVersion: 4
