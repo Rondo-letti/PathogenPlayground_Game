@@ -16,6 +16,7 @@ public class ParallaxController : MonoBehaviour
 
     void Update()
     {
+        // Apply parallax effect to parallaxEffect value
         float temp = (cam.transform.position.x * (1 - parallaxEffect));
         float dist = (cam.transform.position.x * parallaxEffect);
 

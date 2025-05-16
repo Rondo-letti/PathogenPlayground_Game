@@ -7,6 +7,9 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemy;
     public Transform target;
 
+    private bool hasSpawned = false;
+    
+
     public float range = 20f;
 
     // Start is called before the first frame update
@@ -19,22 +22,27 @@ public class EnemySpawner : MonoBehaviour
             target = GameManager.instance.playerTransform;
 
         }
-
-        // Call distance calculator, find distance between enemy and player
-        float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
-
-        if(distance < range)
-        {
-            Instantiate(enemy, transform.position, Quaternion.identity);
-        }
         
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
         
+        if (hasSpawned == false)
+        {
+            // Call distance calculator, find distance between enemy and player
+            float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
+
+
+            if(distance < range)
+            {
+                Instantiate(enemy, transform.position, Quaternion.identity);
+                Debug.Log("Enemy spawned!");
+
+                hasSpawned = true;
+            }
+        }
+
     }
 }

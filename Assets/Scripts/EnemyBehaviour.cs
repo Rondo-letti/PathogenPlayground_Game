@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
     
-    public Transform target;
+    private Transform target;
 
     float moveSpeed = 3f;
     float range = 10f;

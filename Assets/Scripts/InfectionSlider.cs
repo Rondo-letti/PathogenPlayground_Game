@@ -5,14 +5,15 @@ public class InfectionSlider : MonoBehaviour
 {
     public Slider slider;
 
+    // Set Slider values
     void Start()
     {
-
         slider.minValue = 0;
-        slider.maxValue = 3000;
+        slider.maxValue = 1500;
         slider.value = GameManager.instance.infectionValue;
     }
 
+    // Set Infection Value from Game Manager
     void Update()
     {
         if (slider != null)

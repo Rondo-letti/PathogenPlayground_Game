@@ -18,7 +18,7 @@ public class InfectionBehaviour : MonoBehaviour
         
     }
 
-    //
+    // 
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Tile"))
@@ -26,7 +26,7 @@ public class InfectionBehaviour : MonoBehaviour
             //Debug.Log("Player colliding with tile.");
             SpriteRenderer tileRenderer = other.GetComponent<SpriteRenderer>();
 
-            //add a object with a sprite mask to the tiles 
+            // Add a object with a sprite mask to the tiles 
             if (other.transform.Find("TileMask") == null)
             {
                 GameObject maskObj = new GameObject("TileMask");
@@ -46,18 +46,18 @@ public class InfectionBehaviour : MonoBehaviour
         }
     }
 
-    //yellow tiles represent infection area, certain amount of infection = win
+    // Yellow tiles represent infection area, certain amount of infection = win
     public void InfectionTracker(SpriteRenderer tileRenderer)
     {
-        //if the tiles turn yellow, add to the infection value
+        // If the tiles turn yellow, add to the infection value
         if(tileCollided == true)
         {
             GameManager.instance.infectionValue += 1;
             //Debug.Log(GameManager.instance.infectionValue);
         }
 
-        //if the infection value is at X, win condition
-        if (GameManager.instance.infectionValue == 3000)
+        // If the infection value is at X, win condition
+        if (GameManager.instance.infectionValue == 1500)
         {
             //Debug.Log("You Win!");
             UIBehaviour.GameWin();
