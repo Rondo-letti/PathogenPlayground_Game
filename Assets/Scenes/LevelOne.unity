@@ -806,6 +806,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7849798034523385387, guid: 3efca0b06ec4602439fa25110f6f7d77, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 34de98b421076e74691e057a815479ad, type: 3}
     - target: {fileID: 7849798034523385388, guid: 3efca0b06ec4602439fa25110f6f7d77, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4933,6 +4937,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8399017467805073205, guid: a0422b7704d238a478dddccccd29f438, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3ddfb36e46267e24f8b9fe7b01dbb468, type: 3}
     - target: {fileID: 8399017467805073206, guid: a0422b7704d238a478dddccccd29f438, type: 3}
       propertyPath: m_Name
       value: Heartleveldesign-infected-background
