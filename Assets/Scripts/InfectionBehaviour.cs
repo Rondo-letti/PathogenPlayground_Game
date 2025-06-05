@@ -36,6 +36,8 @@ public class InfectionBehaviour : MonoBehaviour
                 SpriteMask mask = maskObj.AddComponent<SpriteMask>();
                 mask.sprite = GameManager.instance.tileMaskSprite;
 
+                maskObj.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
                 tileCollided = true;
 
                 //Debug.Log("Sprite Mask Assigned");
@@ -57,7 +59,7 @@ public class InfectionBehaviour : MonoBehaviour
         }
 
         // If the infection value is at X, win condition
-        if (GameManager.instance.infectionValue == 1500)
+        if (GameManager.instance.infectionValue == 300)
         {
             //Debug.Log("You Win!");
             UIBehaviour.GameWin();

@@ -9,7 +9,7 @@ public class InfectionSlider : MonoBehaviour
     void Start()
     {
         slider.minValue = 0;
-        slider.maxValue = 1500;
+        slider.maxValue = 300;
         slider.value = GameManager.instance.infectionValue;
     }
 
