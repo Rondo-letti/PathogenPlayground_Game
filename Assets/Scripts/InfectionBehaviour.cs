@@ -5,6 +5,14 @@ using UnityEngine;
 public class InfectionBehaviour : MonoBehaviour
 {
     public bool tileCollided;
+    public float maskTargetScale = 1.0f;
+    public float maskScaleSpeed = 5f;
+
+    private Transform activeMaskTransform;
+
+    // Create a list to hold each mask
+    private List<Transform> growingMasks = new List<Transform>();
+
 
     // Start is called before the first frame update
     void Start()
@@ -15,8 +23,23 @@ public class InfectionBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        Vector3 targetScale = new Vector3(maskTargetScale, maskTargetScale, 1f);
+
+        for (int i = growingMasks.Count - 1; i >= 0; i--)
+        {
+            Transform maskTransform = growingMasks[i];
+            if (maskTransform == null) continue;
+
+            maskTransform.localScale = Vector3.Lerp(maskTransform.localScale, targetScale, maskScaleSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(maskTransform.localScale, targetScale) < 0.01f)
+            {
+                maskTransform.localScale = targetScale;
+                growingMasks.RemoveAt(i);
+            }
+        }
+    }     
+
 
     // 
     void OnTriggerEnter2D(Collider2D other)
@@ -36,7 +59,8 @@ public class InfectionBehaviour : MonoBehaviour
                 SpriteMask mask = maskObj.AddComponent<SpriteMask>();
                 mask.sprite = GameManager.instance.tileMaskSprite;
 
-                maskObj.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                maskObj.transform.localScale = Vector3.zero;
+                growingMasks.Add(maskObj.transform);
 
                 tileCollided = true;
 
