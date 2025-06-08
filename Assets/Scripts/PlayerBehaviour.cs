@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+
+    [SerializeField] private ParticleSystem PlayerDamageParticle = default;
+
     // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    //if the player collides with the enemy, take damage 
+    // If the player collides with the enemy, take damage 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Enemy")
@@ -19,9 +22,14 @@ public class PlayerBehaviour : MonoBehaviour
 
             GameManager.instance.playerHealth = GameManager.instance.playerHealth - GameManager.instance.enemyDamage;
 
+
             //Debug.Log(GameManager.instance.playerHealth);
-             
+
+            // If player takes damage, play particle effect
+            PlayerDamageParticle.Play();
+
         }
+
 
         if (GameManager.instance.playerHealth <= 0)
         {
@@ -31,4 +39,6 @@ public class PlayerBehaviour : MonoBehaviour
 
 
     }
+
+
 }

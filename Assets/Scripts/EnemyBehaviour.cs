@@ -8,7 +8,8 @@ public class EnemyBehaviour : MonoBehaviour
     private Transform target;
 
     float moveSpeed = 3f;
-    float range = 10f;
+    float rotationSpeed = 180f;
+    float range = 15f;
     float despawnDist = 30f;
 
     // Start is called before the first frame update
@@ -27,29 +28,33 @@ public class EnemyBehaviour : MonoBehaviour
     void Update()
     {
 
-    if (target == null)
-    {
-        //Do nothing
-        return;
-    }
-    
-    // Call distance calculator, find distance between enemy and player
-    float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
+        if (target == null)
+        {
+            //Do nothing
+            return;
+        }
 
-    // If the enemy is far enough away, destroy itself
-    if (distance > despawnDist)
-    {
-        Destroy(gameObject);
-        Debug.Log("Enemy is destroyed!");
-    }
+        // Call distance calculator, find distance between enemy and player
+        float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
 
-    if (distance < range)
-    {
-        // So long as the enemy is within range, move towards it at rate speed.
-        Vector3 direction = (target.position - transform.position).normalized;
-        transform.position += direction * moveSpeed * Time.deltaTime;
-    }
+        // If the enemy is far enough away, destroy itself
+        if (distance > despawnDist)
+        {
+            Destroy(gameObject);
+            Debug.Log("Enemy is destroyed!");
+        }
 
+        if (distance < range)
+        {
+            // So long as the enemy is within range, move towards it at rate speed.
+            Vector3 direction = (target.position - transform.position).normalized;
+            transform.position += direction * moveSpeed * Time.deltaTime;
+        }
+
+        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
+
+        Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90f));
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
     // Set the target of the enemy

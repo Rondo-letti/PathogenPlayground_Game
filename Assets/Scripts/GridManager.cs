@@ -6,18 +6,12 @@ public class GridManager : MonoBehaviour
 {
     [SerializeField] private int _width, _height;
     [SerializeField] private Tile _tilePrefab;
-    public float tileSize = 5.0f;
+    public float tileSize = 3f;
 
     private Dictionary<Vector2, Tile> _tiles;
 
     void Start()
     {
-        SpriteRenderer renderer = _tilePrefab.GetComponent<SpriteRenderer>();
-        if (renderer != null)
-        {
-            tileSize = renderer.bounds.size.x;
-        }
-
         GenerateGrid();
     }
     void GenerateGrid() 
@@ -29,9 +23,21 @@ public class GridManager : MonoBehaviour
         for (int x = 0; x < _width; x++) 
         {
             for (int y = 0; y < _height; y++) {
+                
+                // On every odd row, offset tile position by tileSize/5
+                float xOffset;
 
+                if (y % 2 == 1)
+                    {
+                        xOffset = tileSize / 5f;
+                    }
+                else
+                    {
+                        xOffset = 0f;
+                    }
+                    
                 // Create prefabs of the tiles with the "Tile" tag
-                Vector3 position = new Vector3(x * tileSize, y * tileSize);
+                Vector3 position = new Vector3(x * tileSize + xOffset, y * tileSize);
                 var spawnedTile = Instantiate(_tilePrefab, position, Quaternion.identity);
                 spawnedTile.name = $"Tile {x} {y}";
                 spawnedTile.tag = "Tile";

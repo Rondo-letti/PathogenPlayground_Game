@@ -10,6 +10,10 @@ public class UIBehaviour : MonoBehaviour
     public TMP_Text healthText;
     public TMP_Text timerText;
 
+    public GameObject lifeOne;
+    public GameObject lifeTwo;
+    public GameObject lifeThree;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,14 +32,44 @@ public class UIBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (healthText != null)
+        if (GameManager.instance.playerHealth <= 60)
         {
-            healthText.text = "Health: " + GameManager.instance.playerHealth.ToString();
+            Destroy(lifeThree.gameObject);
         }
-    
+
+        else
+        {
+            //Nothing happens
+        }
+
+        if (GameManager.instance.playerHealth <= 30)
+        {
+            Destroy(lifeTwo.gameObject);
+        }
+
+        else
+        {
+            //Nothing happens
+        }
+
+        if (GameManager.instance.playerHealth <= 0)
+        {
+            Destroy(lifeOne.gameObject);
+        }
+
+        else
+        {
+            //Nothing happens
+        }
+
         if (timerText != null)
         {
             timerText.text = "Time Left: " + GameManager.instance.countdownValue.ToString();
+        }
+
+        else
+        {
+            //Nothing happens
         }
     }
 

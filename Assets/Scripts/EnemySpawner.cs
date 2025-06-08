@@ -28,14 +28,14 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (hasSpawned == false)
         {
             // Call distance calculator, find distance between enemy and player
             float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
 
 
-            if(distance < range)
+            if (distance < range)
             {
                 Instantiate(enemy, transform.position, Quaternion.identity);
                 Debug.Log("Enemy spawned!");
@@ -43,6 +43,9 @@ public class EnemySpawner : MonoBehaviour
                 hasSpawned = true;
             }
         }
+        
+        // If hasSpawned = true, after x seconds, hasSpawned = false
+        
 
     }
 }

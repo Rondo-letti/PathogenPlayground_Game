@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
         while (GameManager.instance.countdownValue > 0)
         {
             Debug.Log("Countdown: " + GameManager.instance.countdownValue);
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(1f);
             GameManager.instance.countdownValue--;
         }
 

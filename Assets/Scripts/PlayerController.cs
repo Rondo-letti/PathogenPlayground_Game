@@ -9,24 +9,32 @@ public class PlayerController : MonoBehaviour
 	public float moveSpeed = 2f;
     private Vector3 targetPosition;
 
+	//float rotationSpeed = 180f;
+
 	// Use this for initialization
 	void Start () {
 	
 
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
-        
-        // Convert mouse position to world space coordinates
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = transform.position.z;
-        targetPosition = Vector3.Lerp(transform.position, mousePosition, moveSpeed * Time.deltaTime);
-    
-        
-        // Player moves and faces toward mouse position
-        transform.position = targetPosition;
-		//transform.LookAt(targetPosition);
+	void Update()
+	{
+
+		// Convert mouse position to world space coordinates
+		mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		mousePosition.z = transform.position.z;
+		targetPosition = Vector3.Lerp(transform.position, mousePosition, moveSpeed * Time.deltaTime);
+
+
+		// Player moves and faces toward mouse position
+		transform.position = targetPosition;
+
+		//float angle = Mathf.Atan2(mousePosition.y - transform.position.y, mousePosition.x - transform.position.x) * Mathf.Rad2Deg;
+
+        //Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90f));
+        //transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+		
 
 
 	}
