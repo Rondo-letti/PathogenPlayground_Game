@@ -6,7 +6,6 @@ public class EnemyDashBehaviour : MonoBehaviour
 {
 
     private Transform target;
-    private Vector3 direction;
 
     float moveSpeed = 3f;
     float rotationSpeed = 180f;
@@ -17,6 +16,8 @@ public class EnemyDashBehaviour : MonoBehaviour
     float pauseDistance = 5f;
     float pauseTimer = 0.4f;
 
+    public EnemyDashState state;
+    private Vector3 playerLastPos;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,21 @@ public class EnemyDashBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        switch (state)
+        {
+            case EnemyDashState.IDLE:
+                break;
+            case EnemyDashState.SLOWFOLLOW:
+                OnSlowFollow();
+                break;
+            case EnemyDashState.DASHCHARGE:
+                OnChargeDash();
+                break;
+
+
+
+        }
 
         if (target == null)
         {
@@ -87,5 +103,41 @@ public class EnemyDashBehaviour : MonoBehaviour
         target = newTarget;
     }
 
+    void OnSlowFollow()
+    {
+        // Logic for movement
+        playerLastPos = target.position;
 
+        // When we are close enough to the player, activate dash pause aka charge
+        if (distance <= pauseDistance)
+        {
+            state = EnemyDashState.DASHCHARGE;
+        }
+    }
+
+    void OnChargeDash()
+    {
+
+        // When within pauseDistance, the timer starts - start pausing
+        pauseTimer -= Time.deltaTime;
+        moveSpeed = 0f;
+
+        // If the timer reaches zero, dash
+        if (pauseTimer <= 0)
+        {
+            moveSpeed = 9f;
+            playerLastPos = target.position;
+            state = EnemyDashState.DASH;
+        }
+
+        // Record current players position, 
+        
+    }
+
+
+}
+
+public enum EnemyDashState
+{
+    IDLE, SLOWFOLLOW, DASHCHARGE, DASH
 }
