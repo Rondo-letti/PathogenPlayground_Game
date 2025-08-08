@@ -6,6 +6,7 @@ public class EnemyDashBehaviour : MonoBehaviour
 {
 
     private Transform target;
+    private Vector3 direction;
 
     float moveSpeed = 3f;
     float rotationSpeed = 180f;
@@ -13,10 +14,8 @@ public class EnemyDashBehaviour : MonoBehaviour
     float despawnDist = 30f;
 
 
-    float pauseDistance = 9f;
-    private bool paused;
-    float timer = 2f;
-
+    float pauseDistance = 5f;
+    float pauseTimer = 0.4f;
 
 
     // Start is called before the first frame update
@@ -55,19 +54,21 @@ public class EnemyDashBehaviour : MonoBehaviour
         if (distance < range)
         {
             // So long as the enemy is within range, move towards it at rate speed.
-            Vector3 direction = (target.position - transform.position).normalized;
+            direction = (target.position - transform.position).normalized;
             transform.position += direction * moveSpeed * Time.deltaTime;
+
+            // At the end of pause phase, save the player position, move toward player position
         }
 
         // If the enemy is within the pauseDistance, pause
         if (distance <= pauseDistance)
         {
-            // When the timer starts, start pausing
-            timer -= Time.deltaTime;
-            paused = true;
+            // When within pauseDistance, the timer starts - start pausing
+            pauseTimer -= Time.deltaTime;
+            moveSpeed = 0f;
 
             // If the timer reaches zero, charge
-            if (timer <= 0)
+            if (pauseTimer <= 0)
             {
                 moveSpeed = 9f;
             }
