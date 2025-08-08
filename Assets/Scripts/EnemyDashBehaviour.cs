@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehaviour : MonoBehaviour
+public class EnemyDashBehaviour : MonoBehaviour
 {
 
     private Transform target;
@@ -11,7 +11,13 @@ public class EnemyBehaviour : MonoBehaviour
     float rotationSpeed = 180f;
     float range = 15f;
     float despawnDist = 30f;
-    float pauseRange = 5f;
+
+
+    float pauseDistance = 9f;
+    private bool paused;
+    float timer = 2f;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +29,7 @@ public class EnemyBehaviour : MonoBehaviour
             target = GameManager.instance.playerTransform;
 
         }
+
     }
 
     // Update is called once per frame
@@ -52,6 +59,20 @@ public class EnemyBehaviour : MonoBehaviour
             transform.position += direction * moveSpeed * Time.deltaTime;
         }
 
+        // If the enemy is within the pauseDistance, pause
+        if (distance <= pauseDistance)
+        {
+            // When the timer starts, start pausing
+            timer -= Time.deltaTime;
+            paused = true;
+
+            // If the timer reaches zero, charge
+            if (timer <= 0)
+            {
+                moveSpeed = 9f;
+            }
+        }
+
         // Rotate toward the target (player)
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
 
@@ -64,7 +85,6 @@ public class EnemyBehaviour : MonoBehaviour
     {
         target = newTarget;
     }
-    
 
 
 }
