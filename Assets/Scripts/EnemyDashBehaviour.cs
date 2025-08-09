@@ -46,9 +46,6 @@ public class EnemyDashBehaviour : MonoBehaviour
             case EnemyDashState.DASHCHARGE:
                 OnChargeDash();
                 break;
-
-
-
         }
 
         if (target == null)
@@ -67,28 +64,6 @@ public class EnemyDashBehaviour : MonoBehaviour
             //Debug.Log("Enemy is destroyed!");
         }
 
-        if (distance < range)
-        {
-            // So long as the enemy is within range, move towards it at rate speed.
-            direction = (target.position - transform.position).normalized;
-            transform.position += direction * moveSpeed * Time.deltaTime;
-
-            // At the end of pause phase, save the player position, move toward player position
-        }
-
-        // If the enemy is within the pauseDistance, pause
-        if (distance <= pauseDistance)
-        {
-            // When within pauseDistance, the timer starts - start pausing
-            pauseTimer -= Time.deltaTime;
-            moveSpeed = 0f;
-
-            // If the timer reaches zero, charge
-            if (pauseTimer <= 0)
-            {
-                moveSpeed = 9f;
-            }
-        }
 
         // Rotate toward the target (player)
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
@@ -105,7 +80,17 @@ public class EnemyDashBehaviour : MonoBehaviour
 
     void OnSlowFollow()
     {
+
+        float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
+
         // Logic for movement
+        if (distance < range)
+        {
+            // So long as the enemy is within range, move towards it at rate speed.
+            Vector3 direction = (target.position - transform.position).normalized;
+            transform.position += direction * moveSpeed * Time.deltaTime;
+        }
+        
         playerLastPos = target.position;
 
         // When we are close enough to the player, activate dash pause aka charge
@@ -131,7 +116,8 @@ public class EnemyDashBehaviour : MonoBehaviour
         }
 
         // Record current players position, 
-        
+
+
     }
 
 
