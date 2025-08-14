@@ -7,14 +7,14 @@ public class GameManager : MonoBehaviour
     public Sprite tileMaskSprite;
 
     public static GameManager instance;
-  
-    public Transform playerTransform;    
+
+    public Transform playerTransform;
 
     public float playerHealth = 100f;
     public float enemyDamage = 10f;
 
     public int infectionValue = 0;
-    
+
     public int countdownValue = 60;
 
     //float timeLeft = 180f;
@@ -38,19 +38,16 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        
+
     }
 
     // Calculates the distance between two positions
     public float DistanceCalculator(Vector2 enemyPos, Vector2 playerPos)
     {
         // Get the distance between the enemy and the player
-		float distance = Vector2.Distance(enemyPos, playerPos);    
-		return distance;
+        float distance = Vector2.Distance(enemyPos, playerPos);
+        return distance;
     }
-
-
-
-
+    
 
 }

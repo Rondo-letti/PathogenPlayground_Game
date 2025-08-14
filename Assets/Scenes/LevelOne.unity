@@ -762,6 +762,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445e7d88868f1c841b1674107e99081a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseTimer: 2
+  state: 0
 --- !u!212 &227158857
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8355,7 +8357,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1390347761}
   - component: {fileID: 1390347762}
-  - component: {fileID: 1390347763}
   m_Layer: 0
   m_Name: ShadowBackground
   m_TagString: Untagged
@@ -8430,20 +8431,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1390347763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390347760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c63dedb5cd0730498b07d8566a12416, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallaxEffect: 1
 --- !u!1001 &1395923082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8607,7 +8594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1505643336
 Transform:
   m_ObjectHideFlags: 0

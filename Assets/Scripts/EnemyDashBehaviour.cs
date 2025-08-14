@@ -10,11 +10,12 @@ public class EnemyDashBehaviour : MonoBehaviour
     float moveSpeed = 3f;
     float rotationSpeed = 180f;
     float range = 15f;
+    float detectingRange = 10f;
     float despawnDist = 30f;
 
 
     float pauseDistance = 5f;
-    float pauseTimer = 0.4f;
+    public float pauseTimer = 2;
 
     public EnemyDashState state;
     private Vector3 playerLastPos;
@@ -30,21 +31,28 @@ public class EnemyDashBehaviour : MonoBehaviour
 
         }
 
+        //state = EnemyDashState.IDLE;
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+
         switch (state)
         {
             case EnemyDashState.IDLE:
+                Idle();
                 break;
             case EnemyDashState.SLOWFOLLOW:
                 OnSlowFollow();
                 break;
             case EnemyDashState.DASHCHARGE:
                 OnChargeDash();
+                break;
+            case EnemyDashState.DASH:
+                Dash();
                 break;
         }
 
@@ -72,6 +80,13 @@ public class EnemyDashBehaviour : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
+    public void Idle()
+    {
+        // Nothing happens
+        Debug.Log("Enemy is idle");
+        state = EnemyDashState.SLOWFOLLOW;
+    }
+
     // Set the target of the enemy
     public void SetTarget(Transform newTarget)
     {
@@ -83,19 +98,21 @@ public class EnemyDashBehaviour : MonoBehaviour
 
         float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
 
-        // Logic for movement
+        // Logic for movement 
         if (distance < range)
         {
             // So long as the enemy is within range, move towards it at rate speed.
-            Vector3 direction = (target.position - transform.position).normalized;
-            transform.position += direction * moveSpeed * Time.deltaTime;
+            playerLastPos = target.position;
+            Move();
+            Debug.Log("Enemy is following");
         }
-        
+
         playerLastPos = target.position;
 
         // When we are close enough to the player, activate dash pause aka charge
         if (distance <= pauseDistance)
         {
+            pauseTimer = 2;
             state = EnemyDashState.DASHCHARGE;
         }
     }
@@ -106,18 +123,47 @@ public class EnemyDashBehaviour : MonoBehaviour
         // When within pauseDistance, the timer starts - start pausing
         pauseTimer -= Time.deltaTime;
         moveSpeed = 0f;
+        Debug.Log("Enemy is charging");
+
 
         // If the timer reaches zero, dash
         if (pauseTimer <= 0)
         {
-            moveSpeed = 9f;
             playerLastPos = target.position;
             state = EnemyDashState.DASH;
         }
 
-        // Record current players position, 
+    }
+
+    void Dash()
+    {
+        float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
+
+        // pass move speed and move to position
+        DashMovement(10);
 
 
+
+        // Head toward playerLastPos and overshoot
+        if (distance > detectingRange)
+        {
+            pauseTimer = 2;
+            state = EnemyDashState.SLOWFOLLOW;
+        }
+
+    }
+
+    private void Move()
+    {
+        Vector3 direction = (playerLastPos - transform.position).normalized;
+        transform.position += direction * moveSpeed * Time.deltaTime;
+    }
+    
+    private void DashMovement(float dashSpeed)
+    {
+        Debug.Log("enemy is dashing");
+        Vector3 direction = (playerLastPos - transform.position).normalized;
+        transform.position += direction * dashSpeed * Time.deltaTime;
     }
 
 
