@@ -541,6 +541,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 1627238522}
   timerText: {fileID: 0}
+  lifeOne: {fileID: 0}
+  lifeTwo: {fileID: 0}
+  lifeThree: {fileID: 0}
 --- !u!114 &438006059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,6 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba9e7c0493ae7a42b7c0d345b9e3702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDamageParticle: {fileID: 0}
 --- !u!95 &870281516
 Animator:
   serializedVersion: 4
@@ -1106,7 +1110,7 @@ Animator:
   m_GameObject: {fileID: 870281508}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e5f22b47ed46bc48af4cd1db8d63392, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7d49e88dde4ca234bb02bead3a34a288, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1808,11 +1812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1224840950318605296, guid: e709aa79f777a774f88ac3d865b741ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5666122
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 1224840950318605296, guid: e709aa79f777a774f88ac3d865b741ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 59.9
+      value: 75.38
       objectReference: {fileID: 0}
     - target: {fileID: 1224840950318605296, guid: e709aa79f777a774f88ac3d865b741ca, type: 3}
       propertyPath: m_LocalPosition.z
