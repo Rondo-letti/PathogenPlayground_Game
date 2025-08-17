@@ -15,7 +15,7 @@ public class EnemyDashBehaviour : MonoBehaviour
 
 
     float pauseDistance = 5f;
-    public float pauseTimer = 2;
+    public float pauseTimer = 1;
 
     public EnemyDashState state;
     private Vector3 playerLastPos;
@@ -30,8 +30,6 @@ public class EnemyDashBehaviour : MonoBehaviour
             target = GameManager.instance.playerTransform;
 
         }
-
-        //state = EnemyDashState.IDLE;
 
     }
 
@@ -112,7 +110,7 @@ public class EnemyDashBehaviour : MonoBehaviour
         // When we are close enough to the player, activate dash pause aka charge
         if (distance <= pauseDistance)
         {
-            pauseTimer = 2;
+            pauseTimer = 1;
             state = EnemyDashState.DASHCHARGE;
         }
     }
@@ -147,7 +145,7 @@ public class EnemyDashBehaviour : MonoBehaviour
         // Head toward playerLastPos and overshoot
         if (distance > detectingRange)
         {
-            pauseTimer = 2;
+            pauseTimer = 1;
             state = EnemyDashState.SLOWFOLLOW;
         }
 
