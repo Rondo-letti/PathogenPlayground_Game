@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyExplodeBehaviour : MonoBehaviour
 {
-
+/*
     private Transform target;
 
     float moveSpeed = 3f;
@@ -108,7 +108,7 @@ public class EnemyExplodeBehaviour : MonoBehaviour
         }
 
         // Scale explosionCollider from enemy position out to maxExplosionRange over 1 second  
-        circleCollider2D.range = 10f;
+        Collider.range = 10f;
         // Destroy self
 
     }
@@ -116,5 +116,5 @@ public class EnemyExplodeBehaviour : MonoBehaviour
     public enum EnemyExplodeState
     {
         IDLE, SLOWFOLLOW, EXPLODECHARGE, EXPLODE
-    }
+    }*/
 }
