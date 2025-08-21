@@ -11,7 +11,6 @@ public class EnemyBehaviour : MonoBehaviour
     float rotationSpeed = 180f;
     float range = 15f;
     float despawnDist = 30f;
-    float pauseRange = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +53,7 @@ public class EnemyBehaviour : MonoBehaviour
         
         
         // Rotate toward the target (player)
-            float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90f));
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);

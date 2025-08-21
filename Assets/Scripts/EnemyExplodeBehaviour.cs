@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class EnemyExplodeBehaviour : MonoBehaviour
 {
-/*
+
     private Transform target;
 
     float moveSpeed = 3f;
-    float rotationSpeed = 180f;
     float range = 15f;
-    float detectingRange = 10f;
-    float despawnDist = 30f;
 
+    public float explosionTargetScale = 5f;
+    public float explosionScaleSpeed = 5f;
     float slowDistance = 2f;
 
     public EnemyExplodeState state;
@@ -75,11 +74,8 @@ public class EnemyExplodeBehaviour : MonoBehaviour
         if (distance < range)
         {
             // So long as the enemy is within range, move towards it at rate speed.
-            playerLastPos = target.position;
             Move();
         }
-
-        playerLastPos = target.position;
 
         // When we are close enough to the player, activate explode charge aka explode slow
         if (distance <= slowDistance)
@@ -99,22 +95,48 @@ public class EnemyExplodeBehaviour : MonoBehaviour
 
     public void OnExplode()
     {
+        var explosionCollider = gameObject.AddComponent<CircleCollider2D>();
+
         // Create explosionCollider
-        if (gameObject.AddComponent<Collider2D>() == null)
+        if (explosionCollider == null)
         {
-            var Collider = gameObject.AddComponent<CircleCollider2D>();
-            Collider.isTrigger = true;
-            circleCollider2D.range = 0f;
+            explosionCollider.isTrigger = true;
+            //explosionCollider.radius = 0f;
+            Debug.Log(explosionCollider.radius);
         }
 
         // Scale explosionCollider from enemy position out to maxExplosionRange over 1 second  
-        Collider.range = 10f;
-        // Destroy self
+        //explosionCollider.radius = 10f;
 
+        //Vector3 targetScale = new Vector3(explosionTargetScale, explosionTargetScale, 1f);
+
+
+        //explosionCollider.radius = Vector3.Lerp(explosionCollider.radius, targetScale, explosionScaleSpeed * Time.deltaTime);
+
+
+        // Destroy self
+        Destroy(gameObject);
+
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GameManager.instance.playerHealth = GameManager.instance.playerHealth - GameManager.instance.enemyDamage;
+            Debug.Log("Player takes damage");
+
+        } 
+    }
+
+    private void Move()
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        transform.position += direction * moveSpeed * Time.deltaTime;
     }
 
     public enum EnemyExplodeState
     {
         IDLE, SLOWFOLLOW, EXPLODECHARGE, EXPLODE
-    }*/
+    }
 }

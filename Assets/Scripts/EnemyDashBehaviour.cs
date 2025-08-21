@@ -102,7 +102,7 @@ public class EnemyDashBehaviour : MonoBehaviour
             // So long as the enemy is within range, move towards it at rate speed.
             playerLastPos = target.position;
             Move();
-            Debug.Log("Enemy is following");
+            //Debug.Log("Enemy is following");
         }
 
         playerLastPos = target.position;
@@ -121,7 +121,7 @@ public class EnemyDashBehaviour : MonoBehaviour
         // When within pauseDistance, the timer starts - start pausing
         pauseTimer -= Time.deltaTime;
         moveSpeed = 0f;
-        Debug.Log("Enemy is charging");
+        //Debug.Log("Enemy is charging");
 
 
         // If the timer reaches zero, dash
@@ -159,7 +159,7 @@ public class EnemyDashBehaviour : MonoBehaviour
     
     private void DashMovement(float dashSpeed)
     {
-        Debug.Log("enemy is dashing");
+        //Debug.Log("Enemy is dashing");
         Vector3 direction = (playerLastPos - transform.position).normalized;
         transform.position += direction * dashSpeed * Time.deltaTime;
     }
