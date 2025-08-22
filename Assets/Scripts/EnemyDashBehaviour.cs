@@ -8,6 +8,7 @@ public class EnemyDashBehaviour : MonoBehaviour
     private Transform target;
 
     float moveSpeed = 3f;
+    float dashSpeed = 10;
     float rotationSpeed = 180f;
     float range = 15f;
     float detectingRange = 10f;
@@ -18,7 +19,9 @@ public class EnemyDashBehaviour : MonoBehaviour
     public float pauseTimer = 1;
 
     public EnemyDashState state;
-    private Vector3 playerLastPos;
+    //private Vector3 playerLastPos;
+    private Vector3 desiredMovementDirection;
+
 
     // Start is called before the first frame update
     void Start()
@@ -95,17 +98,14 @@ public class EnemyDashBehaviour : MonoBehaviour
     {
 
         float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
-
+        UpdateDesiredDirection();
         // Logic for movement 
         if (distance < range)
         {
             // So long as the enemy is within range, move towards it at rate speed.
-            playerLastPos = target.position;
-            Move();
+            Move(moveSpeed);
             //Debug.Log("Enemy is following");
         }
-
-        playerLastPos = target.position;
 
         // When we are close enough to the player, activate dash pause aka charge
         if (distance <= pauseDistance)
@@ -127,7 +127,8 @@ public class EnemyDashBehaviour : MonoBehaviour
         // If the timer reaches zero, dash
         if (pauseTimer <= 0)
         {
-            playerLastPos = target.position;
+            UpdateDesiredDirection();
+            // instead of position, use direction, method move direction
             state = EnemyDashState.DASH;
         }
 
@@ -138,7 +139,7 @@ public class EnemyDashBehaviour : MonoBehaviour
         float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
 
         // pass move speed and move to position
-        DashMovement(10);
+        Move(dashSpeed);
 
 
 
@@ -151,19 +152,17 @@ public class EnemyDashBehaviour : MonoBehaviour
 
     }
 
-    private void Move()
+    private void Move(float desiredMoveSpeed)
     {
-        Vector3 direction = (playerLastPos - transform.position).normalized;
-        transform.position += direction * moveSpeed * Time.deltaTime;
-    }
-    
-    private void DashMovement(float dashSpeed)
-    {
-        //Debug.Log("Enemy is dashing");
-        Vector3 direction = (playerLastPos - transform.position).normalized;
-        transform.position += direction * dashSpeed * Time.deltaTime;
+        
+        transform.position += desiredMovementDirection * desiredMoveSpeed * Time.deltaTime;
     }
 
+    private void UpdateDesiredDirection()
+    {
+        desiredMovementDirection = (target.position - transform.position).normalized;
+
+    }
 
 }
 

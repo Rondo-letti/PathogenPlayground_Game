@@ -29,6 +29,7 @@ public class PlayerBehaviour : MonoBehaviour
             PlayerDamageParticle.Play();
 
         }
+        
 
 
         if (GameManager.instance.playerHealth <= 0)
