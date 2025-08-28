@@ -11,7 +11,7 @@ public class EnemyDashBehaviour : MonoBehaviour
     float dashSpeed = 10;
     float rotationSpeed = 180f;
     float range = 15f;
-    float detectingRange = 10f;
+    float detectingRange = 5f;
     float despawnDist = 30f;
 
 
@@ -98,9 +98,11 @@ public class EnemyDashBehaviour : MonoBehaviour
     {
 
         float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
+
         UpdateDesiredDirection();
+
         // Logic for movement 
-        if (distance < range)
+        if (distance <= range)
         {
             // So long as the enemy is within range, move towards it at rate speed.
             Move(moveSpeed);
@@ -113,6 +115,7 @@ public class EnemyDashBehaviour : MonoBehaviour
             pauseTimer = 1;
             state = EnemyDashState.DASHCHARGE;
         }
+
     }
 
     void OnChargeDash()
@@ -120,7 +123,7 @@ public class EnemyDashBehaviour : MonoBehaviour
 
         // When within pauseDistance, the timer starts - start pausing
         pauseTimer -= Time.deltaTime;
-        moveSpeed = 0f;
+        moveSpeed = 3f;
         //Debug.Log("Enemy is charging");
 
 

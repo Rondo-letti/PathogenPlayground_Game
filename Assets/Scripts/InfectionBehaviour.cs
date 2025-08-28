@@ -29,7 +29,8 @@ public class InfectionBehaviour : MonoBehaviour
         {
             // Each growingMask in the list undergoes the scaling animation
             Transform maskTransform = growingMasks[i];
-            if (maskTransform == null) continue;
+            if (maskTransform == null)
+            continue;
 
             maskTransform.localScale = Vector3.Lerp(maskTransform.localScale, targetScale, maskScaleSpeed * Time.deltaTime);
         }
