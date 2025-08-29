@@ -7687,6 +7687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lungleveldesign-Foreground
       objectReference: {fileID: 0}
+    - target: {fileID: 1176832683588731916, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1176832683588731917, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -7780,6 +7784,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1176832683917016486, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
   m_PrefabInstance: {fileID: 1277370863}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1277370865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1176832683588731916, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
+  m_PrefabInstance: {fileID: 1277370863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1277370866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277370865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RootBone: {fileID: 0}
+  m_BoneTransforms: []
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_UseBatching: 1
+  m_AlwaysUpdate: 1
+  m_AutoRebind: 0
 --- !u!1 &1279721982
 GameObject:
   m_ObjectHideFlags: 0
