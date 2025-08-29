@@ -12,7 +12,8 @@ public class EnemyExplodeBehaviour : MonoBehaviour
 
     public float explosionTargetScale = 5f;
     public float explosionScaleSpeed = 5f;
-    float slowDistance = 2f;
+    float slowDistance = 10f;
+    float explosionDistance = 2f;
 
     private CircleCollider2D explosionCollider;
 
@@ -97,14 +98,15 @@ public class EnemyExplodeBehaviour : MonoBehaviour
 
     public void OnExplode()
     {
-        if (explosionCollider == null)
+        float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
+
+        if (explosionCollider == null && distance <= explosionDistance)
         {
             // Create explosionCollider
             explosionCollider = gameObject.AddComponent<CircleCollider2D>();
             explosionCollider.isTrigger = true;
             explosionCollider.radius = 50f;
         }
-        
 
         // Destroy self
         Destroy(gameObject);
