@@ -22,6 +22,8 @@ public class EnemyDashBehaviour : MonoBehaviour
     //private Vector3 playerLastPos;
     private Vector3 desiredMovementDirection;
 
+    bool isDashing;
+
 
     // Start is called before the first frame update
     void Start()
@@ -98,6 +100,7 @@ public class EnemyDashBehaviour : MonoBehaviour
     {
 
         float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
+        isDashing = false;
 
         UpdateDesiredDirection();
 
@@ -131,6 +134,7 @@ public class EnemyDashBehaviour : MonoBehaviour
         if (pauseTimer <= 0)
         {
             UpdateDesiredDirection();
+            isDashing = true;
             // instead of position, use direction, method move direction
             state = EnemyDashState.DASH;
         }
@@ -147,7 +151,7 @@ public class EnemyDashBehaviour : MonoBehaviour
 
 
         // Head toward playerLastPos and overshoot
-        if (distance > detectingRange)
+        if (distance > detectingRange && isDashing == true)
         {
             pauseTimer = 1;
             state = EnemyDashState.SLOWFOLLOW;
