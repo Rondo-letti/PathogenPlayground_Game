@@ -34,32 +34,32 @@ public class UIBehaviour : MonoBehaviour
     {
         if (GameManager.instance.playerHealth <= 60)
         {
-            Destroy(lifeThree.gameObject);
+            lifeThree.SetActive(false);
         }
 
         else
         {
-            //Nothing happens
+            lifeThree.SetActive(true);
         }
 
         if (GameManager.instance.playerHealth <= 30)
         {
-            Destroy(lifeTwo.gameObject);
+            lifeTwo.SetActive(false);
         }
 
         else
         {
-            //Nothing happens
+            lifeTwo.SetActive(true);
         }
 
         if (GameManager.instance.playerHealth <= 0)
         {
-            Destroy(lifeOne.gameObject);
+            lifeOne.SetActive(false);
         }
 
         else
         {
-            //Nothing happens
+            lifeOne.SetActive(true);
         }
 
         if (timerText != null)

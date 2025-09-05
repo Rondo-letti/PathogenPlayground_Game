@@ -29,13 +29,14 @@ public class PlayerBehaviour : MonoBehaviour
             PlayerDamageParticle.Play();
 
         }
-        
+
 
 
         if (GameManager.instance.playerHealth <= 0)
         {
             Destroy(gameObject);
             UIBehaviour.GameOver();
+            GameManager.instance.gameOver = true;
         }
 
 

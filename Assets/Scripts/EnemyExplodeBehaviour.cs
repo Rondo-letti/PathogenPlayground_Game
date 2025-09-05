@@ -7,12 +7,12 @@ public class EnemyExplodeBehaviour : MonoBehaviour
 
     private Transform target;
 
-    float moveSpeed = 3f;
+    float moveSpeed = 7f;
     float range = 15f;
 
     public float explosionTargetScale = 5f;
     public float explosionScaleSpeed = 5f;
-    float slowDistance = 10f;
+    float slowDistance = 2f;
     float explosionDistance = 2f;
 
     private CircleCollider2D explosionCollider;
@@ -105,11 +105,11 @@ public class EnemyExplodeBehaviour : MonoBehaviour
             // Create explosionCollider
             explosionCollider = gameObject.AddComponent<CircleCollider2D>();
             explosionCollider.isTrigger = true;
-            explosionCollider.radius = 50f;
+            explosionCollider.radius = 10f;
         }
 
         // Destroy self
-        Destroy(gameObject);
+        Destroy(gameObject, 0.1f);
 
     }
 

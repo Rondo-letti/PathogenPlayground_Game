@@ -11,11 +11,14 @@ public class GameManager : MonoBehaviour
     public Transform playerTransform;
 
     public float playerHealth = 100f;
+    public float playerMoveSpeed = 2f;
     public float enemyDamage = 10f;
 
     public int infectionValue = 0;
 
     public int countdownValue = 60;
+
+    public bool gameOver = false;
 
     //float timeLeft = 180f;
 

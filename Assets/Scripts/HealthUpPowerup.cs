@@ -8,7 +8,6 @@ void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("is colliding");
 
             GameManager.instance.playerHealth = GameManager.instance.playerHealth + 30f;
             Debug.Log(GameManager.instance.playerHealth);

@@ -8,7 +8,10 @@ public class EnemySpawner : MonoBehaviour
     public Transform target;
 
     private bool hasSpawned = false;
+
+    private float spawnerCooldown = 7;
     
+
 
     public float range = 20f;
 
@@ -37,14 +40,27 @@ public class EnemySpawner : MonoBehaviour
 
             if (distance < range)
             {
-                Instantiate(enemy, transform.position, Quaternion.identity);
-                Debug.Log("Enemy spawned!");
-
                 hasSpawned = true;
+
+                Instantiate(enemy, transform.position, Quaternion.identity);
+                Instantiate(enemy, transform.position, Quaternion.identity);
+                Instantiate(enemy, transform.position, Quaternion.identity);
+
             }
         }
+
+        if (hasSpawned == true)
+        {
+            spawnerCooldown -= Time.deltaTime;
+
+            if (spawnerCooldown <= 0)
+            {
+                hasSpawned = false;
+                spawnerCooldown = 7;
+            }
+
+        }
         
-        // If hasSpawned = true, after x seconds, hasSpawned = false
         
 
     }
