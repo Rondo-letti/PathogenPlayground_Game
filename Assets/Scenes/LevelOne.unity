@@ -2278,7 +2278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7783168735424577740, guid: 99882f818b571c04bb0d705b3f5091c9, type: 3}
       propertyPath: countdownValue
-      value: 60
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7783168735424577740, guid: 99882f818b571c04bb0d705b3f5091c9, type: 3}
       propertyPath: tileMaskSprite
@@ -11223,6 +11223,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1136407693
       objectReference: {fileID: 0}
+    - target: {fileID: 1176832683588732018, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 40.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176832683588732018, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1176832683588732019, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
       propertyPath: cam
       value: 
@@ -11377,7 +11385,7 @@ MonoBehaviour:
   - {fileID: 992695059}
   m_Bounds:
     m_Center: {x: 0.0076408386, y: -11.443623, z: 0}
-    m_Extent: {x: 47.347244, y: 30.877216, z: 0}
+    m_Extent: {x: 47.347244, y: 30.87722, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -11496,7 +11504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283140676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.49, y: 1.2, z: -0.2557198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11622,8 +11630,8 @@ MonoBehaviour:
   - {fileID: 1058848755}
   - {fileID: 1517480021}
   m_Bounds:
-    m_Center: {x: 0.007637024, y: -11.4436245, z: 0}
-    m_Extent: {x: 47.347237, y: 30.877222, z: 0}
+    m_Center: {x: 0.0076408386, y: -11.4436245, z: 0}
+    m_Extent: {x: 47.34724, y: 30.877222, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0

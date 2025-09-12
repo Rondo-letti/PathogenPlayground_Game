@@ -17,7 +17,7 @@ void OnTriggerEnter2D(Collider2D col)
                 GameManager.instance.playerHealth = 90f;
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
 
         }
 

@@ -30,7 +30,7 @@ public class SpeedUpPowerup : MonoBehaviour
         {
             GameManager.instance.playerMoveSpeed = GameManager.instance.playerMoveSpeed + 2f;
             isSpeeding = true;
-            Destroy(gameObject);
+            //Destroy(gameObject);
 
         }
 
