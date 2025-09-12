@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemy;
     public Transform target;
 
-    private bool hasSpawned = false;
+    public bool hasSpawned = false;
 
     private float spawnerCooldown = 7;
     
@@ -43,9 +43,6 @@ public class EnemySpawner : MonoBehaviour
                 hasSpawned = true;
 
                 Instantiate(enemy, transform.position, Quaternion.identity);
-                Instantiate(enemy, transform.position, Quaternion.identity);
-                Instantiate(enemy, transform.position, Quaternion.identity);
-
             }
         }
 

@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
             GameManager.instance.countdownValue--;
         }
 
-        Debug.Log("Game Over!");
+        UIBehaviour.GameOver();
     }
     
 }

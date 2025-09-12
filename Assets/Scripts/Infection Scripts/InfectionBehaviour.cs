@@ -80,7 +80,7 @@ public class InfectionBehaviour : MonoBehaviour
         }
 
         // If the infection value is at X, win condition
-        if (GameManager.instance.infectionValue == 500)
+        if (GameManager.instance.infectionValue == GameManager.instance.infectionWinValue)
         {
             //Debug.Log("You Win!");
             UIBehaviour.GameWin();

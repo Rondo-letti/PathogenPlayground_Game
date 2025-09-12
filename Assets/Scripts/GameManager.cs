@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public float enemyDamage = 10f;
 
     public int infectionValue = 0;
+    public int infectionWinValue;
 
     public int countdownValue = 60;
 

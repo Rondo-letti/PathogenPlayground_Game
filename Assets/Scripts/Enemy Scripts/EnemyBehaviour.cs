@@ -7,7 +7,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private Transform target;
 
-    float moveSpeed = 3f;
+    public float moveSpeed = 3f;
     float rotationSpeed = 180f;
     float range = 15f;
     float despawnDist = 30f;
