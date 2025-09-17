@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 		// Convert mouse position to world space coordinates
 		mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		mousePosition.z = transform.position.z;
-		targetPosition = Vector3.Lerp(transform.position, mousePosition, GameManager.instance.playerMoveSpeed * Time.deltaTime);
+		targetPosition = Vector3.MoveTowards(transform.position, mousePosition, GameManager.instance.playerMoveSpeed * Time.deltaTime);
 
 
 		// Player moves and faces toward mouse position
