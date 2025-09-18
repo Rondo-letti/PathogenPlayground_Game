@@ -5,20 +5,35 @@ using UnityEngine;
 public class SpeedUpPowerup : MonoBehaviour
 {
 
-    public float speedUpgradeDuration = 3;
+    public float speedUpgradeDuration = 2;
     bool isSpeeding = false;
 
+    SpriteRenderer playerSpriteRenderer;
+    Color playerColor;
+
+    void Start()
+    {
+
+        if (playerSpriteRenderer == null)
+        {
+            playerSpriteRenderer = GameObject.Find("Player").GetComponent<SpriteRenderer>();
+        }
+    }
+    
     void Update()
     {
         if (isSpeeding == true)
         {
             speedUpgradeDuration -= Time.deltaTime;
+            playerColor = new Color(0, 255, 206);
+            playerSpriteRenderer.color = playerColor;
 
             if (speedUpgradeDuration <= 0)
             {
-                GameManager.instance.playerMoveSpeed = GameManager.instance.playerMoveSpeed - 2f;
-                speedUpgradeDuration = 3;
+                GameManager.instance.playerMoveSpeed = 7f;
+                speedUpgradeDuration = 2;
                 isSpeeding = false;
+                playerSpriteRenderer.color = Color.white;
             }
         }
         
@@ -28,10 +43,10 @@ public class SpeedUpPowerup : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            GameManager.instance.playerMoveSpeed = GameManager.instance.playerMoveSpeed + 2f;
+            GameManager.instance.playerMoveSpeed = 12f;
             isSpeeding = true;
             //Destroy(gameObject);
-
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
 
     }

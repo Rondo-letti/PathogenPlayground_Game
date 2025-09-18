@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class HealthUpPowerup : MonoBehaviour
 {
-void OnTriggerEnter2D(Collider2D col)
+
+
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
         {
@@ -18,6 +20,8 @@ void OnTriggerEnter2D(Collider2D col)
             }
 
             //Destroy(gameObject);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
 
         }
 
