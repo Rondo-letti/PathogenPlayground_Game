@@ -13,7 +13,8 @@ public class EnemySpawner : MonoBehaviour
     
 
 
-    public float range = 20f;
+    public float range = 35f;
+    public float minRange = 25f;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
             float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
 
 
-            if (distance < range)
+            if (distance < range && distance > minRange)
             {
                 hasSpawned = true;
 

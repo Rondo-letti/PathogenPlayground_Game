@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public Transform playerTransform;
 
     public float playerHealth = 100f;
-    public float playerMoveSpeed = 2f;
+    public float playerMoveSpeed = 8f;
     public float enemyDamage = 10f;
 
     public int infectionValue = 0;

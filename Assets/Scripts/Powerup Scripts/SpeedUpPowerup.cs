@@ -19,7 +19,7 @@ public class SpeedUpPowerup : MonoBehaviour
             playerSpriteRenderer = GameObject.Find("Player").GetComponent<SpriteRenderer>();
         }
     }
-    
+
     void Update()
     {
         if (isSpeeding == true)
@@ -30,7 +30,7 @@ public class SpeedUpPowerup : MonoBehaviour
 
             if (speedUpgradeDuration <= 0)
             {
-                GameManager.instance.playerMoveSpeed = 7f;
+                GameManager.instance.playerMoveSpeed = 8f;
                 speedUpgradeDuration = 2;
                 isSpeeding = false;
                 playerSpriteRenderer.color = Color.white;
