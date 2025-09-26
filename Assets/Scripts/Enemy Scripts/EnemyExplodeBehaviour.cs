@@ -7,15 +7,18 @@ public class EnemyExplodeBehaviour : MonoBehaviour
 
     private Transform target;
 
-    float moveSpeed = 7f;
     float range = 15f;
 
-    float slowDistance = 4f;
-    float explosionDistance = 3f;
+    float slowDistance = 3f;
+
+    public float explodeCountdown = 5;
 
     private CircleCollider2D explosionCollider;
 
     public EnemyExplodeState state;
+
+    bool countdownStart = false;
+
 
 
     // Start is called before the first frame update
@@ -52,6 +55,12 @@ public class EnemyExplodeBehaviour : MonoBehaviour
 
         }
 
+        if (countdownStart == true)
+        {
+            explodeCountdown -= Time.deltaTime;
+            Debug.Log(explodeCountdown);
+        }
+
     }
 
     public void Idle()
@@ -75,7 +84,7 @@ public class EnemyExplodeBehaviour : MonoBehaviour
         if (distance < range)
         {
             // So long as the enemy is within range, move towards it at rate speed.
-            Move();
+            Move(4f);
         }
 
         // When we are close enough to the player, activate explode charge aka explode slow
@@ -88,24 +97,24 @@ public class EnemyExplodeBehaviour : MonoBehaviour
 
     public void OnExplodeCharge()
     {
-        float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
+        Debug.Log("Charging");
 
         // Slow down
-        moveSpeed = 2f;
-        Move();
+        Move(2f);
+        countdownStart = true;
 
-        if (distance <= explosionDistance)
+        if (explodeCountdown <= 0)
         {
             state = EnemyExplodeState.EXPLODE;
         }
+
 
     }
 
     public void OnExplode()
     {
-        float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
 
-        if (explosionCollider == null && distance <= explosionDistance)
+        if (explosionCollider == null)
         {
             // Create explosionCollider
             explosionCollider = gameObject.AddComponent<CircleCollider2D>();
@@ -123,16 +132,17 @@ public class EnemyExplodeBehaviour : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameManager.instance.playerHealth = GameManager.instance.playerHealth - GameManager.instance.enemyDamage;
-            Debug.Log("Player takes damage");
+            //Debug.Log("Player takes damage");
 
         } 
     }
 
-    private void Move()
+    private void Move(float desiredMoveSpeed)
     {
-        Vector3 direction = (target.position - transform.position).normalized;
-        transform.position += direction * moveSpeed * Time.deltaTime;
+        Vector3 direction = (target.position - transform.position).normalized;  
+        transform.position += direction * desiredMoveSpeed * Time.deltaTime;
     }
+
 
     public enum EnemyExplodeState
     {

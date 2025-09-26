@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 
 	private Vector3 mousePosition;
     private Vector3 targetPosition;
+	float rotationSpeed = 125f;
+
 
 	//float rotationSpeed = 180f;
 
@@ -29,10 +31,10 @@ public class PlayerController : MonoBehaviour
 		// Player moves and faces toward mouse position
 		transform.position = targetPosition;
 
-		//float angle = Mathf.Atan2(mousePosition.y - transform.position.y, mousePosition.x - transform.position.x) * Mathf.Rad2Deg;
+		float angle = Mathf.Atan2(mousePosition.y - transform.position.y, mousePosition.x - transform.position.x) * Mathf.Rad2Deg;
 
-        //Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90f));
-        //transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90f));
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 		
 
 

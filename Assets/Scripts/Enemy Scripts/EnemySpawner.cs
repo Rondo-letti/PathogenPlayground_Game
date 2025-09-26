@@ -10,11 +10,9 @@ public class EnemySpawner : MonoBehaviour
     public bool hasSpawned = false;
 
     private float spawnerCooldown = 7;
-    
 
-
-    public float range = 35f;
-    public float minRange = 25f;
+    public float range = 40f;
+    public float minRange = 35f;
 
     // Start is called before the first frame update
     void Start()

@@ -11,6 +11,10 @@ public class SpeedUpPowerup : MonoBehaviour
     SpriteRenderer playerSpriteRenderer;
     Color playerColor;
 
+    bool speedUp = false;
+    private float spawnCooldown = 10;
+
+
     void Start()
     {
 
@@ -36,6 +40,18 @@ public class SpeedUpPowerup : MonoBehaviour
                 playerSpriteRenderer.color = Color.white;
             }
         }
+
+        if (speedUp == true)
+        {
+            spawnCooldown -= Time.deltaTime;
+
+            if (spawnCooldown <= 0)
+            {
+                speedUp = false;
+                gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                spawnCooldown = 10;
+            }
+        }
         
     }
 
@@ -45,8 +61,11 @@ public class SpeedUpPowerup : MonoBehaviour
         {
             GameManager.instance.playerMoveSpeed = 12f;
             isSpeeding = true;
+
             //Destroy(gameObject);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+            speedUp = true;
         }
 
     }
