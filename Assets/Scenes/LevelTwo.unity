@@ -9157,6 +9157,10 @@ PrefabInstance:
       value: InfectedBackground
       objectReference: {fileID: 0}
     - target: {fileID: 1176832683917016481, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176832683917016481, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -9912,11 +9916,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2269369771337515508, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.124
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269369771337515508, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.443
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269369771337515508, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9925,6 +9929,22 @@ PrefabInstance:
     - target: {fileID: 2269369771337515509, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
       propertyPath: segmentPoses.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269369771337515510, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269369771337515510, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269369771337515510, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
+      propertyPath: m_UseWorldSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269369771337515510, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1136407693
       objectReference: {fileID: 0}
     - target: {fileID: 2269369771337515510, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
       propertyPath: m_Parameters.colorGradient.ctime1
@@ -9936,11 +9956,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2269369771408046459, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6599995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269369771408046459, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.39000303
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269369771408046459, guid: b8c8a35e99d164043adf6739e85c0ffe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10931,6 +10951,10 @@ PrefabInstance:
     - target: {fileID: 1176832683917016481, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
       propertyPath: m_Name
       value: ParallaxBackground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176832683917016481, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1176832683917016486, guid: c70cc12ab55f5ce418b86fe3676b4528, type: 3}
       propertyPath: m_RootOrder
@@ -17500,6 +17524,10 @@ PrefabInstance:
     - target: {fileID: 9039470659536603420, guid: e4101827213fd0d4fa2697f18f0843c6, type: 3}
       propertyPath: m_Name
       value: BlankBackground
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039470659536603420, guid: e4101827213fd0d4fa2697f18f0843c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9039470659536603422, guid: e4101827213fd0d4fa2697f18f0843c6, type: 3}
       propertyPath: m_RootOrder

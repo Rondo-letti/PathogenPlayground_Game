@@ -16,6 +16,7 @@ public class Tentacle : MonoBehaviour
 
     private void Start()
     {
+        lineRend.useWorldSpace = true;
         lineRend.positionCount = length;
         segmentPoses = new Vector3[length];
         segmentV = new Vector3[length];
