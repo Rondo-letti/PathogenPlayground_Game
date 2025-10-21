@@ -12,21 +12,33 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 28e74b9b02c56c24798da52a52a291a2
   - enabled: 1
-    path: Assets/Scenes/GameOverLevelOne.unity
-    guid: 1708b74a47e57c840925549666077adb
-  - enabled: 1
     path: Assets/Scenes/GameWin.unity
     guid: 4610a2fc6783fe049bfbe128ac2d363a
   - enabled: 1
     path: Assets/Scenes/HowToPlay.unity
     guid: 38596619b2251f44fbf4388b05638f23
   - enabled: 1
-    path: Assets/Scenes/LevelTwo.unity
-    guid: 9d5416aadac22544aa5fe2dc2a2b9fe4
+    path: Assets/Scenes/GameOverLevelOne.unity
+    guid: 1708b74a47e57c840925549666077adb
   - enabled: 1
     path: Assets/Scenes/LevelOne.unity
     guid: e44ed564da4e78e489048b6724ba6d7e
   - enabled: 1
+    path: Assets/Scenes/GameOverLevelTwo.unity
+    guid: eef38cb9b94df4b4f937b62fcd6d2ffe
+  - enabled: 1
+    path: Assets/Scenes/LevelTwo.unity
+    guid: 9d5416aadac22544aa5fe2dc2a2b9fe4
+  - enabled: 1
+    path: Assets/Scenes/GameOverLevelThree.unity
+    guid: ee7d2c21af1bbb24591e48094f3b9160
+  - enabled: 1
     path: Assets/Scenes/LevelThree.unity
     guid: 8a6210c13d86b4642ae958349aca7af8
+  - enabled: 1
+    path: Assets/Scenes/GameOverLevelFour.unity
+    guid: ff2df01650808d94c9c49cc1ddb504e4
+  - enabled: 1
+    path: Assets/Scenes/LevelFour.unity
+    guid: eb540fd3ca2fdeb4fb6294efb67fec69
   m_configObjects: {}

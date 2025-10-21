@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -35,7 +37,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (GameManager.instance.playerHealth <= 0)
         {
             Destroy(gameObject);
-            UIBehaviour.GameOver();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             GameManager.instance.gameOver = true;
         }
 

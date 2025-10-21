@@ -113,13 +113,33 @@ public class UIBehaviour : MonoBehaviour
         SceneManager.LoadSceneAsync("LevelFour");
     }
 
-    public static void GameOver()
+    public static void GameOverLevelOne()
     {
-        SceneManager.LoadSceneAsync("GameOver");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public static void GameOverLevelTwo()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public static void GameOverLevelThree()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    
+    public static void GameOverLevelFour()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public static void GameWin()
     {
         SceneManager.LoadSceneAsync("GameWin");
+    }
+
+    public static void Levels()
+    {
+        SceneManager.LoadSceneAsync("Levels");
     }
 }
