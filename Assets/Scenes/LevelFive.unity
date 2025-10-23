@@ -8631,7 +8631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7783168735424577740, guid: 99882f818b571c04bb0d705b3f5091c9, type: 3}
       propertyPath: countdownValue
-      value: 90
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: -7783168735424577740, guid: 99882f818b571c04bb0d705b3f5091c9, type: 3}
       propertyPath: tileMaskSprite
@@ -8647,7 +8647,7 @@ PrefabInstance:
       objectReference: {fileID: 1595704222}
     - target: {fileID: -7783168735424577740, guid: 99882f818b571c04bb0d705b3f5091c9, type: 3}
       propertyPath: infectionWinValue
-      value: 100
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 5145286197744726551, guid: 99882f818b571c04bb0d705b3f5091c9, type: 3}
       propertyPath: m_Name
