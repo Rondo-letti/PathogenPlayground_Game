@@ -155,6 +155,7 @@ public class EnemyDashBehaviour : MonoBehaviour
         {
             pauseTimer = 1;
             state = EnemyDashState.SLOWFOLLOW;
+            isDashing = false;
         }
 
     }
