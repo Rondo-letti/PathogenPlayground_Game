@@ -8,6 +8,8 @@ public class InfectionBehaviour : MonoBehaviour
     public float maskTargetScale = 10f;
     public float maskScaleSpeed = 5f;
 
+    public GameObject winScreen;
+    public GameObject gameCanvas;
     private Transform activeMaskTransform;
 
     // Create a list to hold each mask
@@ -17,7 +19,7 @@ public class InfectionBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -83,7 +85,12 @@ public class InfectionBehaviour : MonoBehaviour
         if (GameManager.instance.infectionValue == GameManager.instance.infectionWinValue)
         {
             //Debug.Log("You Win!");
-            UIBehaviour.GameWin();
+            //UIBehaviour.GameWin();
+            Time.timeScale = 0;
+            gameCanvas.SetActive(false);
+           
+            winScreen.SetActive(true);
+
         }
     }
 }
