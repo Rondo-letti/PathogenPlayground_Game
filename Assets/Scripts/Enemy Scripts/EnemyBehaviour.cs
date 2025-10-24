@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyBehaviour : MonoBehaviour
 {
 
@@ -10,7 +11,7 @@ public class EnemyBehaviour : MonoBehaviour
     public float moveSpeed = 3f;
     float rotationSpeed = 180f;
     float range = 15f;
-    float despawnDist = 30f;
+    float despawnDist = 50f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (distance > despawnDist)
         {
             Destroy(gameObject);
-            //Debug.Log("Enemy is destroyed!");
+            Debug.Log("Enemy is destroyed!");
         }
 
         if (distance < range)
