@@ -5187,9 +5187,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4421591468364242236, guid: e0cfc5605eb8968468fa6e0bc8c163b2, type: 3}
     - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1595704222}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: minRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5301342847232350679, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: m_Name
       value: ExplodeSpawner02
@@ -5796,9 +5804,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2467825414297987380, guid: d4943bc25507f8744861db112bd36b31, type: 3}
     - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1595704222}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: minRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5301342847232350679, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: m_Name
       value: SpeedSpawner02
@@ -5868,9 +5884,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2467825414297987380, guid: d4943bc25507f8744861db112bd36b31, type: 3}
     - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1595704222}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: minRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5301342847232350679, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: m_Name
       value: SpeedSpawner01
@@ -6149,9 +6173,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4421591468364242236, guid: e0cfc5605eb8968468fa6e0bc8c163b2, type: 3}
     - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1595704222}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: minRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5301342847232350679, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: m_Name
       value: ExplodeSpawner03
@@ -6969,9 +7001,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4421591468364242236, guid: e0cfc5605eb8968468fa6e0bc8c163b2, type: 3}
     - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1595704222}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: minRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5301342847232350679, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: m_Name
       value: ExplodeSpawner05
@@ -7725,9 +7765,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4421591468364242236, guid: e0cfc5605eb8968468fa6e0bc8c163b2, type: 3}
     - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1595704222}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: minRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5301342847232350679, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: m_Name
       value: ExplodeSpawner06
@@ -8196,9 +8244,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4421591468364242236, guid: e0cfc5605eb8968468fa6e0bc8c163b2, type: 3}
     - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1595704222}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: minRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5301342847232350679, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: m_Name
       value: ExplodeSpawner04
@@ -8767,9 +8823,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2467825414297987380, guid: d4943bc25507f8744861db112bd36b31, type: 3}
     - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1595704222}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: minRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5301342847232350679, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: m_Name
       value: SpeedSpawner03
@@ -13335,9 +13399,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4421591468364242236, guid: e0cfc5605eb8968468fa6e0bc8c163b2, type: 3}
     - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1595704222}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: minRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5301342847232350679, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: m_Name
       value: ExplodeSpawner01
@@ -14128,9 +14200,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2467825414297987380, guid: d4943bc25507f8744861db112bd36b31, type: 3}
     - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1595704222}
+    - target: {fileID: 5301342847232350678, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
+      propertyPath: minRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5301342847232350679, guid: 8334e5241c23ca74ba2efe987ba54c7c, type: 3}
       propertyPath: m_Name
       value: SpeedSpawner04
