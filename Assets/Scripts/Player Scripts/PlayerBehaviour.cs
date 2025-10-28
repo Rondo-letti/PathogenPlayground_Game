@@ -9,6 +9,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     [SerializeField] private ParticleSystem PlayerDamageParticle = default;
 
+    private bool playerDead = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,15 +35,23 @@ public class PlayerBehaviour : MonoBehaviour
         }
 
 
-
         if (GameManager.instance.playerHealth <= 0)
         {
-            Destroy(gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-            GameManager.instance.gameOver = true;
+            playerDead = true;
         }
 
 
+    }
+
+    void Update()
+    {
+        if (GameManager.instance.playerHealth <= 0 || playerDead == true)
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            //GameManager.instance.gameOver = true;
+            //Debug.Log("Dead");
+        }
     }
 
 

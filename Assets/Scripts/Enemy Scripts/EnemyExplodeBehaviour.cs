@@ -5,13 +5,15 @@ using UnityEngine;
 public class EnemyExplodeBehaviour : MonoBehaviour
 {
 
+    [SerializeField] private ParticleSystem ExplosionEnemyArea = default;
+
     private Transform target;
 
     float range = 15f;
 
     float slowDistance = 3f;
 
-    public float explodeCountdown = 5;
+    public float explodeCountdown = 1;
 
     private CircleCollider2D explosionCollider;
 
@@ -105,6 +107,8 @@ public class EnemyExplodeBehaviour : MonoBehaviour
 
         if (explodeCountdown <= 0)
         {
+            ExplosionEnemyArea.Play();
+
             state = EnemyExplodeState.EXPLODE;
         }
 
@@ -114,12 +118,14 @@ public class EnemyExplodeBehaviour : MonoBehaviour
     public void OnExplode()
     {
 
+
         if (explosionCollider == null)
         {
             // Create explosionCollider
             explosionCollider = gameObject.AddComponent<CircleCollider2D>();
             explosionCollider.isTrigger = true;
             explosionCollider.radius = 15f;
+
         }
 
         // Destroy self
@@ -132,8 +138,7 @@ public class EnemyExplodeBehaviour : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameManager.instance.playerHealth = GameManager.instance.playerHealth - GameManager.instance.enemyDamage;
-            //Debug.Log("Player takes damage");
-
+            Debug.Log("Player takes damage");
         } 
     }
 

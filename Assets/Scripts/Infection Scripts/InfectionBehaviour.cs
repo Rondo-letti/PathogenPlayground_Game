@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class InfectionBehaviour : MonoBehaviour
 {
@@ -85,11 +87,12 @@ public class InfectionBehaviour : MonoBehaviour
         if (GameManager.instance.infectionValue == GameManager.instance.infectionWinValue)
         {
             //Debug.Log("You Win!");
-            //UIBehaviour.GameWin();
-            Time.timeScale = 0;
-            gameCanvas.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
+            //Time.timeScale = 0;
+            //gameCanvas.SetActive(false);
            
-            winScreen.SetActive(true);
+            //winScreen.SetActive(true);
 
         }
     }

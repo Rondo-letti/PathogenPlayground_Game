@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbff43d0d146374f8217c34995337bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplosionEnemyArea: {fileID: 3658890162970364682, guid: c0df0b0431efa7849971d6e6a50b165c, type: 3}
+  explodeCountdown: 0.25
   state: 0
 --- !u!50 &4421591468364242232
 Rigidbody2D:

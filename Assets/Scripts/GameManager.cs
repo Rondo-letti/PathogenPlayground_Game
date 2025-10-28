@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     public int countdownValue = 60;
 
-    public bool gameOver = false;
+    //public bool gameOver = false;
 
     //float timeLeft = 180f;
 
