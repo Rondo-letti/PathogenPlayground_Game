@@ -76,6 +76,14 @@ public class UIBehaviour : MonoBehaviour
     public static void MainMenu()
     {
         SceneManager.LoadSceneAsync("MainMenu");
+
+        AudioManager.instance.Stop("LevelOneMusic");
+        AudioManager.instance.Stop("LevelTwoMusic");
+        AudioManager.instance.Stop("LevelThreeMusic");
+        AudioManager.instance.Stop("LevelFourMusic");
+        AudioManager.instance.Stop("LevelFiveMusic");        
+        
+        AudioManager.instance.Play("MainMenuMusic");
     }
 
     //public void PauseMenu()
@@ -96,26 +104,67 @@ public class UIBehaviour : MonoBehaviour
     public static void LevelOne()
     {
         SceneManager.LoadSceneAsync("LevelOne");
+
+        AudioManager.instance.Stop("MainMenuMusic");
+        AudioManager.instance.Stop("LevelTwoMusic");
+        AudioManager.instance.Stop("LevelThreeMusic");
+        AudioManager.instance.Stop("LevelFourMusic");
+        AudioManager.instance.Stop("LevelFiveMusic");
+
+        AudioManager.instance.Play("LevelOneMusic");
     }
 
     public static void LevelTwo()
     {
         SceneManager.LoadSceneAsync("LevelTwo");
+
+        AudioManager.instance.Stop("MainMenuMusic");
+        AudioManager.instance.Stop("LevelOneMusic");
+        AudioManager.instance.Stop("LevelThreeMusic");
+        AudioManager.instance.Stop("LevelFourMusic");
+        AudioManager.instance.Stop("LevelFiveMusic");
+
+        AudioManager.instance.Play("LevelTwoMusic");
+        
     }
 
     public static void LevelThree()
     {
         SceneManager.LoadSceneAsync("LevelThree");
+
+        AudioManager.instance.Stop("MainMenuMusic");
+        AudioManager.instance.Stop("LevelOneMusic");
+        AudioManager.instance.Stop("LevelTwoMusic");
+        AudioManager.instance.Stop("LevelFourMusic");
+        AudioManager.instance.Stop("LevelFiveMusic");
+
+        AudioManager.instance.Play("LevelThreeMusic");
     }
 
     public static void LevelFour()
     {
         SceneManager.LoadSceneAsync("LevelFour");
+
+        AudioManager.instance.Stop("MainMenuMusic");
+        AudioManager.instance.Stop("LevelOneMusic");
+        AudioManager.instance.Stop("LevelTwoMusic");
+        AudioManager.instance.Stop("LevelThreeMusic");
+        AudioManager.instance.Stop("LevelFiveMusic");
+
+        AudioManager.instance.Play("LevelFourMusic");
     }
 
     public static void LevelFive()
     {
         SceneManager.LoadSceneAsync("LevelFive");
+
+        AudioManager.instance.Stop("MainMenuMusic");
+        AudioManager.instance.Stop("LevelOneMusic");
+        AudioManager.instance.Stop("LevelTwoMusic");
+        AudioManager.instance.Stop("LevelThreeMusic");
+        AudioManager.instance.Stop("LevelFourMusic");
+
+        AudioManager.instance.Play("LevelFiveMusic");
     }
 
     public static void GameOverLevelOne()
