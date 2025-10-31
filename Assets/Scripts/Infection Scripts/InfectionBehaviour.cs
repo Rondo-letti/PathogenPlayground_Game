@@ -86,8 +86,8 @@ public class InfectionBehaviour : MonoBehaviour
         // If the infection value is at X, win condition
         if (GameManager.instance.infectionValue == GameManager.instance.infectionWinValue)
         {
-            //Debug.Log("You Win!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            Debug.Log("You Win!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
 
             //Time.timeScale = 0;
             //gameCanvas.SetActive(false);
