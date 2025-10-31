@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(LineRenderer))]
 public class Tentacle : MonoBehaviour
 {
     public int length;
@@ -31,6 +32,25 @@ public class Tentacle : MonoBehaviour
             segmentPoses[i] = Vector3.SmoothDamp(segmentPoses[i], segmentPoses[i - 1] + targetDir.right * targetDist, ref segmentV[i], smoothSpeed);   
         }
         lineRend.SetPositions(segmentPoses);
+    }
+
+    private void OnValidate() 
+    {
+
+        if(Application.isPlaying)
+            return;
+
+        if(!lineRend)
+            lineRend = GetComponent<LineRenderer>();
+
+        lineRend.positionCount = length;
+        
+        for (int i = 0; i < lineRend.positionCount; i++)
+        {
+            var distance = i * targetDist;
+            lineRend.SetPosition(i, transform.right * distance);
+        }
+        
     }
 
     

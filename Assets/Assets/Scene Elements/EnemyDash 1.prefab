@@ -268,8 +268,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0.19953999, y: 0.013557126, z: 0}
+  - {x: 0.39907998, y: 0.027114252, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -471,8 +472,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: 0, y: -0, z: 0}
+  - {x: 0.14693896, y: -0.13567956, z: 0}
+  - {x: 0.29387793, y: -0.27135912, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -782,8 +784,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0.17215908, y: 0.10179024, z: 0}
+  - {x: -0.34431815, y: 0.20358048, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -938,8 +941,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: -0, y: -0, z: 0}
+  - {x: -0.19999872, y: -0.00073595205, z: 0}
+  - {x: -0.39999744, y: -0.0014719041, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1094,8 +1098,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0.014011907, y: 0.19950858, z: 0}
+  - {x: -0.028023815, y: 0.39901716, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1250,8 +1255,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: -0, y: -0, z: 0}
+  - {x: -0.021061135, y: -0.198888, z: 0}
+  - {x: -0.04212227, y: -0.397776, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1437,8 +1443,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0.07502105, y: 0.18539646, z: 0}
+  - {x: 0.1500421, y: 0.37079293, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1655,8 +1662,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: -0, y: -0, z: 0}
+  - {x: -0.07708802, y: -0.18454662, z: 0}
+  - {x: -0.15417604, y: -0.36909324, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1842,8 +1850,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0.07324379, y: 0.18610577, z: 0}
+  - {x: -0.14648758, y: 0.37221155, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1998,8 +2007,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0.12872694, y: 0.15306658, z: 0}
+  - {x: 0.2574539, y: 0.30613315, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2154,8 +2164,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: -0, y: -0, z: 0}
+  - {x: -0.16653025, y: -0.11075955, z: 0}
+  - {x: -0.3330605, y: -0.2215191, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2310,8 +2321,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: 0, y: -0, z: 0}
+  - {x: 0.023852289, y: -0.19857256, z: 0}
+  - {x: 0.047704577, y: -0.39714512, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2466,8 +2478,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0.13724159, y: 0.14548112, z: 0}
+  - {x: -0.27448317, y: 0.29096225, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2622,8 +2635,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: 0, y: -0, z: 0}
+  - {x: 0.068305574, y: -0.18797435, z: 0}
+  - {x: 0.13661115, y: -0.3759487, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2778,8 +2792,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: 0, y: -0, z: 0}
+  - {x: 0.18678437, y: -0.07149545, z: 0}
+  - {x: 0.37356874, y: -0.1429909, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2965,8 +2980,9 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 10
   m_Positions:
-  - {x: 1.3052452, y: -0.1109983, z: 0}
-  - {x: 0.42318088, y: -0.04509306, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0.16388729, y: 0.114634015, z: 0}
+  - {x: 0.32777458, y: 0.22926803, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
