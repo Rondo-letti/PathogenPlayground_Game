@@ -9,9 +9,11 @@ public class EnemyBehaviour : MonoBehaviour
     private Transform target;
 
     public float moveSpeed = 3f;
-    float rotationSpeed = 180f;
-    float range = 15f;
+    public float rotationSpeed = 180f;
+    public float range = 15f;
     float despawnDist = 50f;
+
+    public bool canDespawn = true;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +41,7 @@ public class EnemyBehaviour : MonoBehaviour
         float distance = GameManager.instance.DistanceCalculator(transform.position, target.position);
 
         // If the enemy is far enough away, destroy itself
-        if (distance > despawnDist)
+        if (distance > despawnDist && canDespawn == true)
         {
             Destroy(gameObject);
             Debug.Log("Enemy is destroyed!");

@@ -144,9 +144,9 @@ public class EnemyExplodeBehaviour : MonoBehaviour
 
     private void Move(float desiredMoveSpeed)
     {
-        Vector3 direction = (target.position - transform.position).normalized;  
+        Vector3 direction = (target.position - transform.position).normalized;
         transform.position += direction * desiredMoveSpeed * Time.deltaTime;
-    }
+    }    
 
 
     public enum EnemyExplodeState
