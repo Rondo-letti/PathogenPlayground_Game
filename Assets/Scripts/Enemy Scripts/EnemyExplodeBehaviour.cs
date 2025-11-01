@@ -13,7 +13,7 @@ public class EnemyExplodeBehaviour : MonoBehaviour
 
     float slowDistance = 3f;
 
-    public float explodeCountdown = 2;
+    public float explodeCountdown = 3;
 
     private CircleCollider2D explosionCollider;
 
@@ -116,8 +116,8 @@ public class EnemyExplodeBehaviour : MonoBehaviour
 
     public void OnExplode()
     {
-        GameObject enemyExlosion = Instantiate<GameObject>(ExplosionEnemyArea.gameObject);
-        ExplosionEnemyArea.Play();
+        var enemyExplosionEffect = Instantiate(ExplosionEnemyArea, transform.position, Quaternion.identity);
+        enemyExplosionEffect.Play();
 
         if (explosionCollider == null)
         {

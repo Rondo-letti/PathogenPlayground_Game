@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionEnemyArea: {fileID: 3658890162970364682, guid: c0df0b0431efa7849971d6e6a50b165c, type: 3}
-  explodeCountdown: 0.25
+  explodeCountdown: 1
   state: 0
 --- !u!50 &4421591468364242232
 Rigidbody2D:
