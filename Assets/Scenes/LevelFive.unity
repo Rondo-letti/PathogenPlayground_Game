@@ -15866,7 +15866,7 @@ MonoBehaviour:
   moveSpeed: 3
   rotationSpeed: 60
   range: 40
-  canDespawn: 1
+  canDespawn: 0
 --- !u!95 &1951596539
 Animator:
   serializedVersion: 4
