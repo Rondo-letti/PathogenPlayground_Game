@@ -124,7 +124,7 @@ public class EnemyExplodeBehaviour : MonoBehaviour
             // Create explosionCollider
             explosionCollider = gameObject.AddComponent<CircleCollider2D>();
             explosionCollider.isTrigger = true;
-            explosionCollider.radius = 15f;
+            explosionCollider.radius = 10f;
 
         }
 

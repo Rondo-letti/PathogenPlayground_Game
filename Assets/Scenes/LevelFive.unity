@@ -10417,7 +10417,7 @@ PrefabInstance:
       objectReference: {fileID: 1595704222}
     - target: {fileID: -7783168735424577740, guid: 99882f818b571c04bb0d705b3f5091c9, type: 3}
       propertyPath: infectionWinValue
-      value: 150
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 5145286197744726551, guid: 99882f818b571c04bb0d705b3f5091c9, type: 3}
       propertyPath: m_Name
@@ -15766,7 +15766,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -2.56, y: 0.21}
   serializedVersion: 2
-  m_Radius: 4.76
+  m_Radius: 5.14
 --- !u!58 &1951596534
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15782,7 +15782,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -1.01, y: 0.25}
   serializedVersion: 2
-  m_Radius: 5.62
+  m_Radius: 5.75
 --- !u!212 &1951596536
 SpriteRenderer:
   m_ObjectHideFlags: 0
